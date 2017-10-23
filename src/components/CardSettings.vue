@@ -244,6 +244,7 @@
     import affinities from '@/common/affinities'
     import firebase from 'firebase'
     import { mapState} from 'vuex'
+     import { db } from '../initFirebase'
     export default {
         name: 'cardSettings',
         data () {
@@ -455,7 +456,7 @@
             saveCardData() {
                 
                 var userId = firebase.auth().currentUser.uid;
-                var newCardKey = firebase.database().ref().child('cards').push().key;
+                var newCardKey = db.ref().child('cards').push().key;
                 var postData = {
                     uid: userId,
                     cardName: this.$store.state.editCard.cardName,
@@ -486,11 +487,10 @@
                 var updates = {};
                 updates['/cards/' + newCardKey] = postData;
                 updates['/user-cards/' + userId + '/' + newCardKey] = postData;
-                var dbaction = firebase.database().ref().update(updates);
+                var dbaction = db.ref().update(updates);
                     
                     
-                var topUserPostsRef = firebase.database().ref('user-cards/' + userId).orderByChild('cardName');
-                console.log(dbaction,topUserPostsRef);
+                 
             }
         }
     }

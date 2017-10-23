@@ -2,26 +2,26 @@ import firebase from 'firebase'
 import store from './store'
 import firebaseui from 'firebaseui'
 
-firebase.initializeApp({
-  apiKey: "AIzaSyCWQOJPcGeO92Fk9j-cW6WenSmxj6HafPc",
-  authDomain: "battleforge-card-creator.firebaseapp.com",
-  databaseURL: "https://battleforge-card-creator.firebaseio.com",
-  projectId: "battleforge-card-creator",
-  storageBucket: "battleforge-card-creator.appspot.com",
-  messagingSenderId: "774459301247"
-})
+//firebase.initializeApp({
+//  apiKey: "AIzaSyCWQOJPcGeO92Fk9j-cW6WenSmxj6HafPc",
+//  authDomain: "battleforge-card-creator.firebaseapp.com",
+//  databaseURL: "https://battleforge-card-creator.firebaseio.com",
+//  projectId: "battleforge-card-creator",
+//  storageBucket: "battleforge-card-creator.appspot.com",
+//  messagingSenderId: "774459301247"
+//})
 
-//var config = {
-//    apiKey: "AIzaSyAfUNMpgAS4gXLiAFI8fWuzUYiZ6hVvRA4",
-//    authDomain: "my-first-demo-c4b2a.firebaseapp.com",
-//    databaseURL: "https://my-first-demo-c4b2a.firebaseio.com",
-//    projectId: "my-first-demo-c4b2a",
-//    storageBucket: "",
-//    messagingSenderId: "375300092507"
-//  };
-//  firebase.initializeApp(config);
+var config = {
+    apiKey: "AIzaSyAfUNMpgAS4gXLiAFI8fWuzUYiZ6hVvRA4",
+    authDomain: "my-first-demo-c4b2a.firebaseapp.com",
+    databaseURL: "https://my-first-demo-c4b2a.firebaseio.com",
+    projectId: "my-first-demo-c4b2a",
+    storageBucket: "",
+    messagingSenderId: "375300092507"
+  };
+  firebase.initializeApp(config);
 
-
+export const db = firebase.database();
 
 export const ui = new firebaseui.auth.AuthUI(firebase.auth())
 
