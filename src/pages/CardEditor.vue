@@ -8,7 +8,7 @@
                 <CardSettings :card-name="cardName"></CardSettings>
             </md-layout>
 
-            <md-layout md-flex="15">
+            <md-layout md-flex="20" md-align="left">
                 <BfCard :card-name="cardName"
                     :cardImageUrl="cardImage.url"
                     :cardCost="cardCost"
