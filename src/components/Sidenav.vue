@@ -1,6 +1,6 @@
 <template>
     <md-sidenav class="md-left" ref="leftSidenav" @open="OPEN_SIDENAV" @close="CLOSE_SIDENAV" v-bind:class="{ 'md-active': sidenav.isOpen }">
-        <md-toolbar class="md-account-header">
+        <md-toolbar v-bind:class="{ 'md-account-header': !user.isAnonymous }">
             <md-list class="md-transparent">
                 <md-list-item class="md-avatar-list"  v-if="!user.isAnonymous">
                     <md-avatar class="md-large">
