@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import firebase from 'firebase'
 import store from '@/store'
 import CardEditor from '@/pages/CardEditor'
+import MyCards from '@/pages/MyCards'
 import Login from '@/pages/Login'
 import Feed from '@/pages/Feed'
 import Impressum from '@/pages/Impressum'
@@ -15,6 +16,12 @@ const router = new Router({
       path: '/',
       name: 'Home',
       component: CardEditor
+    },
+    {
+        path: '/mycards',
+        name: 'Cards',
+        component: MyCards,
+        meta: { requiresAuth: true }
     },
     {
       path: '/login',

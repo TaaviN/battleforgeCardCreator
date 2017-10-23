@@ -453,6 +453,7 @@
                 this.$store.commit('UPDATE_CARDIMAGE', file[0])
             },
             saveCardData() {
+                
                 var userId = firebase.auth().currentUser.uid;
                 var newCardKey = firebase.database().ref().child('cards').push().key;
                 var postData = {
