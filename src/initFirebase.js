@@ -11,6 +11,15 @@ firebase.initializeApp({
   messagingSenderId: "774459301247"
 })
 
+//var config = {
+//    apiKey: "AIzaSyAfUNMpgAS4gXLiAFI8fWuzUYiZ6hVvRA4",
+//    authDomain: "my-first-demo-c4b2a.firebaseapp.com",
+//    databaseURL: "https://my-first-demo-c4b2a.firebaseio.com",
+//    projectId: "my-first-demo-c4b2a",
+//    storageBucket: "",
+//    messagingSenderId: "375300092507"
+//  };
+//  firebase.initializeApp(config);
 
 
 

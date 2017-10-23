@@ -4,6 +4,7 @@ import firebase from 'firebase'
 import store from '@/store'
 import CardEditor from '@/pages/CardEditor'
 import MyCards from '@/pages/MyCards'
+import AllCards from '@/pages/AllCards'
 import Login from '@/pages/Login'
 import Feed from '@/pages/Feed'
 import Impressum from '@/pages/Impressum'
@@ -22,6 +23,11 @@ const router = new Router({
         name: 'Cards',
         component: MyCards,
         meta: { requiresAuth: true }
+    },
+    {
+        path: '/allcards',
+        name: 'AllCards',
+        component: AllCards 
     },
     {
       path: '/login',
