@@ -1,10 +1,10 @@
 <template>
   <md-toolbar>
-    <!--
+    
     <md-button class="md-icon-button" v-on:click="TOGGLE_SIDENAV">
       <md-icon>menu</md-icon>
     </md-button>
-  -->
+   
 
     <md-button class="md-icon-button">
       <router-link to="/"><md-icon>home</md-icon></router-link>

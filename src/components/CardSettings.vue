@@ -5,7 +5,7 @@
       <md-input v-model="cardName"></md-input>
     </md-input-container>
     <md-input-container>
-      <label>Crad Picture</label>
+      <label>Card Picture</label>
       <md-file v-on:selected="handleSelect" v-model="cardImage.name" accept="image/*"></md-file>
     </md-input-container>
     <md-input-container>
@@ -60,14 +60,24 @@
 
     </md-layout>
 
-    <md-input-container>
+      
+      <md-layout md-gutter>
+      <md-layout>
+        <md-input-container>
       <label>Charge</label>
       <md-input type="number" v-model="charge"></md-input>
     </md-input-container>
-    <md-input-container>
+      </md-layout>
+      <md-layout>
+        <md-input-container>
       <label>Entity Count</label>
       <md-input type="number" v-model="entityCount"></md-input>
     </md-input-container>
+      </md-layout>
+    </md-layout>
+      
+    
+     
     <md-input-container>
       <label>Entity Name</label>
       <md-input v-model="entityName"></md-input>
@@ -112,10 +122,9 @@
       </md-layout>
     </md-layout>
 
-
-
-
-    <md-input-container>
+ <md-layout md-gutter>
+      <md-layout>
+       <md-input-container>
       <label for="editionSymbol">Edition Symbole</label>
       <md-select name="editionSymbol" id="editionSymbol" v-model="editionSymbol">
         <md-option v-for="item in editionSymbols"
@@ -123,7 +132,9 @@
         :value="item.value">{{ item.label }}</md-option>
       </md-select>
     </md-input-container>
-    <md-input-container>
+      </md-layout>
+      <md-layout>
+      <md-input-container>
       <label for="affinity">Affinity</label>
       <md-select name="affinity" id="affinity" v-model="affinity">
         <md-option v-for="item in affinities"
@@ -131,6 +142,12 @@
         :value="item.value">{{ item.label }}</md-option>
       </md-select>
     </md-input-container>
+      </md-layout>
+    </md-layout>
+
+
+    
+    
 
     <md-layout md-gutter>
       <md-layout>
